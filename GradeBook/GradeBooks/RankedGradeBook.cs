@@ -11,9 +11,10 @@ namespace GradeBook.GradeBooks
 
     class RankedGradeBook:BaseGradeBook
     {
-        public RankedGradeBook(string name):base(name)
+        public RankedGradeBook(string name, bool isWeighted) :base(name, isWeighted)
         {
             Type = GradeBookType.Ranked;
+            isWeighted = isWeighted;
         }
 
         public override char GetLetterGrade(double averageGrade)
